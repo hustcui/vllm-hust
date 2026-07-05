@@ -81,9 +81,9 @@ class CacheConfig:
     bfloat16 instead, this is an invalid option for models that do not default
     to fp8.
     """
-    kivi_group_size: int = Field(default=32, gt=0)
+    kivi_group_size: int = Field(default=128, gt=0)
     """Group size for KIVI fake quantization when cache_dtype='kivi_int4'."""
-    kivi_residual_length: int = Field(default=32, gt=0)
+    kivi_residual_length: int = Field(default=128, gt=0)
     """Number of most-recent full-precision KV tokens kept by KIVI."""
     is_attention_free: bool = False
     """Whether the model is attention-free. This is primarily set in

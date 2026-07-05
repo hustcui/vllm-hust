@@ -285,7 +285,7 @@ class FullAttentionSpec(AttentionSpec):
 
 @dataclass(frozen=True, kw_only=True)
 class KIVIInt4FullAttentionSpec(FullAttentionSpec):
-    kivi_group_size: int = 32
+    kivi_group_size: int = 128
     quant_bits: int = 4
     quant_packed_dtype: torch.dtype = torch.int32
     scale_dtype: torch.dtype | None = None

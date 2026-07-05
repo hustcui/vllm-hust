@@ -227,8 +227,8 @@ def test_kivi_cache_config_validation():
     config = CacheConfig(cache_dtype="kivi_int4")
 
     assert config.cache_dtype == "kivi_int4"
-    assert config.kivi_group_size == 32
-    assert config.kivi_residual_length == 32
+    assert config.kivi_group_size == 128
+    assert config.kivi_residual_length == 128
 
 
 def test_kivi_cache_config_rejects_invalid_residual_length():

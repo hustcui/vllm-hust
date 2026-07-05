@@ -121,5 +121,5 @@ def test_kivi_cache_args_from_cli():
     vllm_config = EngineArgs.from_cli_args(args=args).create_engine_config()
 
     assert vllm_config.cache_config.cache_dtype == "kivi_int4"
-    assert vllm_config.cache_config.kivi_group_size == 32
-    assert vllm_config.cache_config.kivi_residual_length == 32
+    assert vllm_config.cache_config.kivi_group_size == 128
+    assert vllm_config.cache_config.kivi_residual_length == 128
